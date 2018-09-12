@@ -1,0 +1,51 @@
+# Spec
+
+## Part one: Create Boards
+### Estimated time: 3-4 hours
+- Create a BoardModel Class
+- Models a Board of hits and misses
+- Methods:
+  - boolean hitAt(x, y)
+  - boolean missAt(x, y)
+  - void setHit(x, y)
+  - void setMiss(x, y)
+- Create BoardView:
+  - abstract, extends JPanel
+  - Border layout: Center button panels, Left or right tool bar
+- Create UserBoardView:
+  - extends BoardView
+  - Toolbar:
+    - Lets you place the ships
+    - Lets you place hits
+- Create EnemyBoardView:
+  - extends BoardView
+  - Toolbar:
+    - place hits
+    - place misses
+    
+## Part Two: Text chat
+### Estimated time: 4-5 hours
+  - Create TextChat
+    - start a Thread
+      - if connecting, connect
+      - if serving, start a server
+    - TextChatServer.write(CharBuffer buf)
+    - synchronzied TextChatServer.read(CharBuffer buf) 
+    - (something like that anyway)
+    - TextChatServer.addActionListener
+      - listens for new chats
+  - Create TextChatView
+    - is an actionListener on TextChat
+    - when it actionPerformed is called, use the read methods to read the chat
+      in and write it into the gui
+    - When a new chat is sent, load it into a CharBuffer and write it
+
+## Part Three:
+  - Add the ai
+  
+## Part Four: Polish
+### Estimated time: 2-3 hours
+  - Do testing: Important!
+  - Add images: Less Important.
+  - Make a better way to connect to another player (e.g. search local network):
+    Probably not that worthwhile, depending on how much time I have
